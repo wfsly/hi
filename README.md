@@ -1,5 +1,7 @@
 # Hi
 
+[参考链接][mod]
+
 go mod 测试
 
 1. 在`GOPATH`之外创建一个文件夹, 例如hi
@@ -30,3 +32,21 @@ go 1.13
 
 require github.com/wfsly/hi v1.0.0
 ```
+
+7. 当hi包做过小版本更新后。可通过下面指令获取更新
+```
+go get -u
+go get -u=patch
+go get github.com/wfsly/hi@v1.0.1
+```
+
+有如下输出
+```
+go: finding github.com/wfsly/hi v1.0.1
+go: downloading github.com/wfsly/hi v1.0.1
+go: extracting github.com/wfsly/hi v1.0.1
+```
+
+go.mod中的版本也更新为了v1.0.1
+
+[mod]: https://learnku.com/go/t/38809
